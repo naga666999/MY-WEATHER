@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.app-canvas {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Crucial for images: cover the entire screen, center it, and don't repeat */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+}
+
+/* --- REALISTIC BACKGROUND IMAGES --- */
+
+/* Default / Clear Day */
+.theme-default,
+.theme-sunny {
+  background-image: url("https://images.unsplash.com/photo-1601297183305-6df142704ea2?q=80&w=1974&auto=format&fit=crop");
+  /* Alternative: https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0 */
+}
+
+/* Cloudy / Overcast */
+.theme-cloudy {
+  background-image: url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1951&auto=format&fit=crop");
+  /* Alternative: https://images.unsplash.com/photo-1594156596782-656c93979103 */
+}
+
+/* Rain */
+.theme-rainy {
+  background-image: url("https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=1974&auto=format&fit=crop");
+}
+
+/* Thunderstorm */
+.theme-storm {
+  background-image: url("https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2071&auto=format&fit=crop");
+}
+
+/* Clear Night */
+.theme-night {
+  background-image: url("https://images.unsplash.com/photo-1532978379173-523e16f371f2?q=80&w=2070&auto=format&fit=crop");
+}
+
+/* Mist / Fog */
+.theme-mist {
+  background-image: url("https://images.unsplash.com/photo-1543968996-ee822b8176ba?q=80&w=1928&auto=format&fit=crop");
+}
+
+/* --- GLASSMORNPHISM DASHBOARD --- */
+.glass-card {
+  width: 90%;
+  max-width: 480px;
+  /* More transparent background to let the image show through */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 40px;
+  color: white;
+  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* --- OTHER UI ELEMENTS (Unchanged) --- */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.search-section input {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+.search-section button {
+  padding: 0 20px;
+  border-radius: 18px;
+  border: none;
+  background: white;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-section button:hover {
+  background: #f0f0f0;
+}
+
+.main-display {
+  margin-bottom: 30px;
+}
+.main-display h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.temp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temp-row img {
+  width: 100px;
+  height: 100px;
+}
+.big-degree {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.condition-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+.stat-pill {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 20px;
+  flex: 1;
+}
+.stat-pill span {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+.stat-pill strong {
+  font-size: 1.2rem;
+}
+
+.forecast-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.mini-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 10px;
+  border-radius: 18px;
+  font-size: 0.9rem;
+}
+.mini-card img {
+  width: 50px;
+  height: 50px;
+  margin: 5px 0;
+}
+
+.pro-loader {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.fade-in-ui {
+  animation: slideUp 0.6s ease-out;
+}
+/* --- TIME & DATE STYLING --- */
+.date-time-container {
+  margin-bottom: 25px;
+}
+
+.time-badge {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.date-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+/* Ensure background image covers full viewport */
+.app-canvas {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+}
+/* --- SEARCH & SUGGESTIONS --- */
+.search-container {
+  position: relative; /* Keep dropdown aligned to input */
+  margin-bottom: 30px;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  color: #333;
+  text-align: left;
+}
+
+.suggestions-list li {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.suggestions-list li:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* --- GLASS CARD TWEAK --- */
+.glass-card {
+  /* Allow overflow for the dropdown shadow */
+  overflow: visible;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
