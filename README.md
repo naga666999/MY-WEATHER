@@ -1,16 +1,103 @@
-# React + Vite
+# 🌦️ Premium Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, modern **Weather Application** built with **React + Vite**, featuring real-time climate data, dynamic backgrounds, a live global clock, and a sleek **glassmorphism UI**.  
+Designed to deliver both **visual elegance** and **accurate weather insights**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🌍 **Real-Time Weather Data**  
+  Get current temperature, humidity, wind speed, pressure, and “feels like” values for any city worldwide.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📅 **5-Day Weather Forecast**  
+  Displays daily forecasts with weather icons and temperature trends.
 
-## Expanding the ESLint configuration
+- 🎨 **Dynamic Weather Backgrounds**  
+  Automatically switches HD backgrounds based on live weather conditions:
+  - ☀️ Sunny  
+  - ☁️ Cloudy  
+  - 🌧️ Rainy  
+  - 🌙 Night  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⏰ **Live Global Clock**  
+  Shows the exact local **time & date** of the searched city using timezone offsets.
+
+- 🔍 **Smart City Search with Suggestions**  
+  Intelligent city search dropdown using debouncing for fast and accurate results.
+
+- 📱 **Responsive Professional UI**  
+  Fully responsive design with:
+  - Glassmorphism cards  
+  - Mesh gradients  
+  - Smooth animations  
+  - Mobile-first layout  
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** React.js (Hooks, Functional Components)
+- **Build Tool:** Vite
+- **API Integration:** Axios  
+  - OpenWeatherMap Weather API  
+  - OpenWeatherMap Geocoding API
+- **Styling:** CSS3  
+  - Glassmorphism  
+  - Gradient backgrounds  
+  - Animations & transitions
+- **Deployment:** Netlify
+
+---
+
+## 🛠️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+2️⃣ Install Dependencies
+
+Bash
+npm install
+3️⃣ Configure Environment Variables
+Create a .env file in the root directory and add:
+
+Env
+VITE_WEATHER_API_KEY=your_openweathermap_api_key
+🔑 Get your API key from: https://openweathermap.org/api
+4️⃣ Start the Development Server
+
+Bash
+npm run dev
+The app will run on:
+
+
+http://localhost:5173
+🌍 Deployment (Netlify)
+Steps to Deploy:
+Build the project:
+Copy code
+Bash
+npm run build
+Push your project to GitHub.
+Connect your GitHub repository to Netlify.
+Add Environment Variable in Netlify:
+Copy code
+
+VITE_WEATHER_API_KEY = your_openweathermap_api_key
+Deploy 🎉
+🔗 Live URL:https://my-weather-app510.netlify.app/
+
+https://your-site-name.netlify.app
+
+🧠 Portfolio Highlights (Why This Project Matters)
+Implemented real-time API integration with error handling
+Designed a dynamic UI system based on live weather conditions
+Built a timezone-aware global clock
+Optimized search using debouncing
+Applied modern UI/UX design principles
+Production-ready deployment using Netlify + Vite
+This project demonstrates strong skills in React, API integration, UI/UX design, and deployment workflows.
